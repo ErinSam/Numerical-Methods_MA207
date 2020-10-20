@@ -26,14 +26,11 @@ def nevilles_method(x):
     
     # Neville's Method 
     for i in range(1, data.shape[0]):
-        for j in range(1, i):
+        for j in range(1,i+1):
             lagrange_approximation[i,j] = ( (x - data_point[i]) * lagrange_approximation[i-1,j-1] 
-                                            - (x - data_point[i-j]) * lagrange_approximation[i,j-1] )
-                                            / (data_point[i-j] - data_point[i]) 
+                                            - (x - data_point[i-j]) * lagrange_approximation[i,j-1] ) / (data_point[i-j] - data_point[i]) 
 
-    # Writing the values to the xls file
-    # ADD
-
+    print(lagrange_approximation)
 
 ###################################################################################################
 ###################################################################################################
