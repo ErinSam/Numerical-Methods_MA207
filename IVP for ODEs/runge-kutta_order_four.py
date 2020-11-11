@@ -11,7 +11,7 @@ import math as m
 
 
 
-def runge_kutta_order_4(a, b, N, initial_condition, f)
+def runge_kutta_order_4(a, b, N, initial_condition, f):
     """
         Function that approximates the solution of the IVP
             y' = f(t,y),    a <= t <= b,     y(a) = initial_condition
