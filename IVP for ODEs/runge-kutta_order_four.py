@@ -46,3 +46,19 @@ def runge_kutta_order_4(a, b, N, initial_condition, f):
         data_pts[i,1] = data_pts[i-1,1] + (k1 + 2 * k2 + 2 * k3 + k4) / 6
 
     return data_pts
+
+
+
+def f(t,y):
+    # DEFINE FUNCTION HERE 
+
+
+print("\n\nPlease enter the endpoints of the IVP (a,b):")
+a = float(input("a: "))
+b = float(input("b: "))
+initial_condition = float(input("Initial Condtions, y(a): ")
+N = int(input("Number of data points: "))
+
+
+data_val = runge_kutta_order_4(a,b,N,initial_condition,f)
+print(data_val)
